@@ -1,0 +1,12 @@
+
+
+<app-info-alert [infoMessage]="'Assignment Two'"></app-info-alert>
+
+<label>Username: {{ username }}</label>
+<input type="text" class="form-control" [(ngModel)] = "username" />
+<br/><button class="btn btn-primary" [disabled]="!enableButton()" (click)="username = ''">Reset User</button>
+<br/>
+
+<br/><br/>
+
+

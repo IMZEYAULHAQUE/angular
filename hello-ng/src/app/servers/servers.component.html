@@ -1,0 +1,23 @@
+
+<label>Server Name: Event Binding</label>
+<input type="text" class="form-control" (input)="onServerNameUpdate($event)" /><br/>
+
+<label>Server Name: Two way Binding</label>
+<input type="text" class="form-control" [(ngModel)] = "serverName" /><br/>
+
+<button class="btn btn-primary" [disabled]="!allowNewServer">Mock Server (Property binding)</button>&nbsp;&nbsp;&nbsp;
+<button class="btn btn-secondary" (click)="onServerCreation()">Add Server (Event binding)</button>
+<hr/>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+
+<p *ngIf="serverCreated; else noserver">Server created with name '{{ serverName }}'</p>
+<ng-template #noserver>
+    Server not created
+</ng-template>
+
+
+<app-server (onServerDelete)="serverDeleteEvent($event)"
+*ngFor="let server of servers" ></app-server>
+
+
+<br/>

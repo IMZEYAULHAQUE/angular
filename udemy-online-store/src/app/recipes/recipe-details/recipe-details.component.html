@@ -1,0 +1,49 @@
+<br />
+<div class="row" style="padding-left: 40px;">
+    <div class="card" style="width: 25rem;">
+        <div class="card-header">
+            <h3 class="list-group-item-heading">Recipe Name</h3>
+        </div>
+        <div class="card-body">
+
+            <div class="row">
+                <img [src]='' alt="{{ 'image alt name'}}" class="img-responsive"
+                        style="max-height: 70px;">
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Manage Recipe
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Add to List</a>
+                                    <a class="dropdown-item" href="#">xxxxxxx</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    Description: 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    Ingredients: 
+                </div>
+            </div>
+
+
+
+            <app-recipe-item></app-recipe-item>
+        </div>
+    </div>
+</div>

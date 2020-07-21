@@ -1,0 +1,12 @@
+
+
+<div [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: getServerStatus() === 'online'}">
+    
+    {{ 'Server' }} with Id {{ serverId }} is {{ getServerStatus() }}
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <button class="btn btn-danger" (click)="onDeleteClick($event)">Delete Me</button>
+        </div>
+    </div> 
+</div>

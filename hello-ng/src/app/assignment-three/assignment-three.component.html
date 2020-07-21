@@ -1,0 +1,21 @@
+
+
+
+<div class="container p-3 my-3 bg-dark text-white">
+    <app-info-alert [infoMessage]="'Assignment Three'"></app-info-alert>
+    <button class="btn btn-warning" (click)="toggleShowDetails()">Display Details</button>
+    <p *ngIf="showDetails" >
+        My  name is Mohammad Zeyaul Haque. I am currently learning Angular v10. 
+    </p>
+    <br/>
+    <div class="container-sm border">
+        <label>Button Click Logs (Asc order): </label>
+        <li 
+            *ngFor="let blog of buttonLogs; index as i"   
+            [ngStyle]="{backgroundColor: i > 5 ? 'green' : 'blue'}"  
+            [ngClass]="{whiteLabel: i > 5}"> {{i + 1}}. {{ blog }}</li>
+    </div>
+    
+
+
+  </div>
